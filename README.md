@@ -1,11 +1,15 @@
 # nii2dcm
-This gear performs makes a DICOM from the isotropic reconstruction nifti data. Use axial DICOM as the reference dicom.
+This gear generates a DICOM from the isotropic reconstruction nifti data. Use axial DICOM as the reference dicom.
 
 ## Overview
 
 [Usage](#usage)
 
-python ciso_nii2dcm.py --dcm T2axi.dcm --nii isoRecon.nii --series 1001 --desc "CISO - Not Diagnostic" --out ciso.dcm
+input = isotropic reconstruction (of nifti file to convert to dcm)
+dcm = reference DICOM file
+out = output filename 
+series = series number (optional)
+desc = series description (optional)
 
 [FAQ](#faq)
 
@@ -17,7 +21,7 @@ python ciso_nii2dcm.py --dcm T2axi.dcm --nii isoRecon.nii --series 1001 --desc "
 **license:**
 MIT License  
 
-**url:** <https://github.com/Nialljb/fw-ants-vbm>
+**url:** <https://github.com/Nialljb/fw-nii2dcm>
 
 **cite:**  
 
