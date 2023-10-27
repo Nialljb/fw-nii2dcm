@@ -42,7 +42,7 @@
         },
         "gear-builder": {
             "category": "analysis",
-            "image": "flywheel/nii2dcm:0.0.1"
+            "image": "flywheel/nii2dcm:0.0.2"
         },
         "kcl-app-binary": "app/main.sh",
         "kcl-app-modalities": [
@@ -87,5 +87,5 @@
     "name": "nii2dcm",
     "source": "",
     "url": "",
-    "version": "0.0.1"
+    "version": "0.0.2"
 }
