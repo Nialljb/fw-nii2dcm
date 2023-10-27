@@ -1,0 +1,91 @@
+{
+    "author": "Emil Ljungberg & Niall Bourke",
+    "cite": "",
+    "command": "python3 /flywheel/v0/run.py",
+    "config": {
+        "prefix": {
+            "default": "ciso",
+            "description": "A prefix that is prepended to all output files.",
+            "type": "string"
+        },
+        "series": {
+            "default": false,
+            "description": "",
+            "type": "string"
+        },
+        "description": {
+            "default": false,
+            "description": "",
+            "type": "string"
+        }
+    },
+    "custom": {
+        "analysis-level": "participant",
+        "flywheel": {
+            "classification": {
+                "components": [
+                    "nii2dcm"
+                ],
+                "keywords": [
+                    "conversion",
+                    "dicom",
+                    "nifti"
+                ],
+                "modality": [
+                    "MR"
+                ],
+                "type": [
+                    "nifti"
+                ]
+            },
+            "suite": "UNITY Apps"
+        },
+        "gear-builder": {
+            "category": "analysis",
+            "image": "flywheel/nii2dcm:0.0.1"
+        },
+        "kcl-app-binary": "app/main.sh",
+        "kcl-app-modalities": [
+            "anat"
+        ]
+    },
+    "description": "This gear takes the isotropic hyperfine reconstructions that have been bias corrected (N4) and calculates volume estimates for white matter, grey matter & CSF by calculating Jacobian determinants. ROI outputs can be selected from a number of atlases in the configuration.",
+    "environment": {
+        "CONDA_DIR": "/opt/conda",
+        "FLYWHEEL": "/flywheel/v0",
+        "GPG_KEY": "E3FF2839C048B25C084DEBE9B26995E310250568",
+        "LANG": "C.UTF-8",
+        "PATH": "/opt/conda/bin:/opt/ants/bin/:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+        "PYTHON_GET_PIP_SHA256": "fa6f3fb93cce234cd4e8dd2beb54a51ab9c247653b52855a48dd44e6b21ff28b",
+        "PYTHON_GET_PIP_URL": "https://github.com/pypa/get-pip/raw/c20b0cfd643cd4a19246ccf204e2997af70f6b21/public/get-pip.py",
+        "PYTHON_PIP_VERSION": "21.2.3",
+        "PYTHON_VERSION": "3.8.11",
+        "container": "oci",
+        "FSLDIR": "/opt/conda",
+        "FSL_CONDA_CHANNEL": "https://fsl.fmrib.ox.ac.uk/fsldownloads/fslconda/public",
+        "ANTSPATH": "/opt/ants/bin/"
+    },
+    "inputs": {
+        "api-key": {
+            "base": "api-key",
+            "read-only": true
+        },
+        "input": {
+            "base": "file",
+            "description": "input file (usually bias corrected isotropic reconstruction)",
+            "optional": false
+        },
+        "dicom": {
+            "base": "file",
+            "description": "DICOM reference file (usually AXIAL for Isotropic reconstruction)",
+            "optional": false
+        }
+    },
+    "label": "nii2dcm",
+    "license": "MIT",
+    "maintainer": "Emil Ljungberg <emil.ljungberg@kcl.ac.uk>,  Niall Bourke <niall.bourke@kcl.ac.uk>",
+    "name": "nii2dcm",
+    "source": "",
+    "url": "",
+    "version": "0.0.1"
+}
