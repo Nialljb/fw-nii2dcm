@@ -5,11 +5,11 @@ This gear generates a DICOM from the isotropic reconstruction nifti data. Use ax
 
 [Usage](#usage)
 
-input = isotropic reconstruction (of nifti file to convert to dcm)
-dcm = reference DICOM file
-out = output filename 
-series = series number (optional)
-desc = series description (optional)
+input = isotropic reconstruction (of nifti file to convert to dcm)  
+dcm = reference DICOM file  
+out = output filename   
+series = series number (optional)  
+desc = series description (optional)  
 
 [FAQ](#faq)
 
