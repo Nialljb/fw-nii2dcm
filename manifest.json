@@ -42,14 +42,14 @@
         },
         "gear-builder": {
             "category": "analysis",
-            "image": "flywheel/nii2dcm:0.0.2"
+            "image": "flywheel/nii2dcm:0.0.3"
         },
         "kcl-app-binary": "app/main.sh",
         "kcl-app-modalities": [
             "anat"
         ]
     },
-    "description": "This gear takes the isotropic hyperfine reconstructions that have been bias corrected (N4) and calculates volume estimates for white matter, grey matter & CSF by calculating Jacobian determinants. ROI outputs can be selected from a number of atlases in the configuration.",
+    "description": "This gear takes the isotropic hyperfine reconstructions that and converts it from NIFTI to DICOM",
     "environment": {
         "CONDA_DIR": "/opt/conda",
         "FLYWHEEL": "/flywheel/v0",
@@ -86,6 +86,6 @@
     "maintainer": "Emil Ljungberg <emil.ljungberg@kcl.ac.uk>,  Niall Bourke <niall.bourke@kcl.ac.uk>",
     "name": "nii2dcm",
     "source": "",
-    "url": "",
-    "version": "0.0.2"
+    "url": "https://github.com/Nialljb/fw-nii2dcm",
+    "version": "0.0.3"
 }

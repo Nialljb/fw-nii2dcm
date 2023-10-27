@@ -12,7 +12,7 @@ log = logging.getLogger(__name__)
 def main(context: GearToolkitContext) -> None:
 
     # Get the input files
-    input, dcm, out, series, desc = parse_config()
+    input, dcm, out, series, desc = parse_config(context)
     # Run the nii2dcm function
     nii2dcm(input, dcm, out, series, desc)
 
