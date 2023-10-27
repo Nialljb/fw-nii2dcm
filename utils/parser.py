@@ -5,8 +5,6 @@ from typing import Tuple
 from flywheel_gear_toolkit import GearToolkitContext
 import json
 import os
-from utils.parser import get_dicom
-
 
 def parse_config(
     gear_context: GearToolkitContext,

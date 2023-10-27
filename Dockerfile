@@ -16,8 +16,6 @@ RUN apt-get update && \
     pip install matplotlib && \
     pip install numpy && \
     pip install typing && \
-    pip install json && \
-    pip install os && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Configure entrypoint

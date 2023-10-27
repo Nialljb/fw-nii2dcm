@@ -9,12 +9,12 @@
             "type": "string"
         },
         "series": {
-            "default": false,
+            "default": "",
             "description": "",
             "type": "string"
         },
         "description": {
-            "default": false,
+            "default": "",
             "description": "",
             "type": "string"
         }
@@ -78,7 +78,7 @@
         "dicom": {
             "base": "file",
             "description": "DICOM reference file (usually AXIAL for Isotropic reconstruction)",
-            "optional": false
+            "optional": true
         }
     },
     "label": "nii2dcm",
